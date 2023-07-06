@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: azure;
+}
+
+.accordion {
+  width: 40%;
+  background-color: #ecf0f1;
+  margin: 50px 50px;
+}
+.accordion-tab label {
+  color: #ecf0f1;
+  background-color: rgba(27, 141, 194, 0.884);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  position: relative;
+  display: block;
+  padding: 12px 20px;
+  cursor: pointer;
+  border: 1px solid gray;
+}
+.accordion-tab > .accordian-contant {
+  max-height: 0;
+  transition: all 0.4s;
+  overflow: hidden;
+}
+/* 
+.accordion-tab > .lable::after {
+      <i class="fa-solid fa-square-down"></i>
+} */
+.accordian-contant p {
+  padding: 15px 20px;
+  line-height: 20px;
+}
+.accordion-tab > .accordion-toggle:checked ~ .accordian-contant {
+  max-height: 100vh;
+  padding: 10px;
+}
