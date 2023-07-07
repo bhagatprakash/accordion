@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>accordion-3</title>
+    <link rel="stylesheet" href="./Accordion-3.css" />
+    <!-- font ausome cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- google font  -->
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">What is FAQ ?</h1>
+
+      <div class="accordion-wrapper">
+        <div class="accordion">
+          <div class="accordion_heading">
+            <h1>web designining</h1>
+            <i class="fas fa-angle-down"></i>
+          </div>
+
+          <p class="accordion-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+            alias, hic deleniti adipisci nihil, velit voluptatibus optio rem
+            quis odio minus eos! Maiores, sapiente doloremque. Voluptatum iste
+            dolore cupiditate esse.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-wrapper">
+        <div class="accordion">
+          <div class="accordion_heading">
+            <h1>Your contact details ?</h1>
+            <i class="fas fa-angle-down"></i>
+          </div>
+
+          <p class="accordion-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+            alias, hic deleniti adipisci nihil, velit voluptatibus optio rem
+            quis odio minus eos! Maiores, sapiente doloremque. Voluptatum iste
+            dolore cupiditate esse.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-wrapper">
+        <div class="accordion">
+          <div class="accordion_heading">
+            <h1>What about other things ?</h1>
+            <i class="fas fa-angle-down"></i>
+          </div>
+
+          <p class="accordion-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+            alias, hic deleniti adipisci nihil, velit voluptatibus optio rem
+            quis odio minus eos! Maiores, sapiente doloremque. Voluptatum iste
+            dolore cupiditate esse.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-wrapper">
+        <div class="accordion">
+          <div class="accordion_heading">
+            <h1>Any more exmpale ?</h1>
+            <i class="fas fa-angle-down"></i>
+          </div>
+
+          <p class="accordion-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+            alias, hic deleniti adipisci nihil, velit voluptatibus optio rem
+            quis odio minus eos! Maiores, sapiente doloremque. Voluptatum iste
+            dolore cupiditate esse.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-wrapper">
+        <div class="accordion">
+          <div class="accordion_heading">
+            <h1>web devlopar</h1>
+            <i class="fas fa-angle-down"></i>
+          </div>
+
+          <p class="accordion-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+            alias, hic deleniti adipisci nihil, velit voluptatibus optio rem
+            quis odio minus eos! Maiores, sapiente doloremque. Voluptatum iste
+            dolore cupiditate esse.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let accordion = document.querySelectorAll(".accordion-wrapper .accordion");
+    accordion.forEach((acco) => {
+      acco.onclick = () => {
+        accordion.forEach((subcontent) => {
+          subcontent.classList.remove("active");
+        });
+        acco.classList.add("active");
+      };
+    });
+  </script>
+</html>

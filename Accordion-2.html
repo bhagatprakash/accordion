@@ -21,7 +21,7 @@
           <span>What is FAQ ?</span>
 
           <span class="icon">
-            <img src="./images/down-arrow-svgrepo-com.svg" id="up1" alt="" />
+            <i class="fas fa-angle-down"></i>
           </span>
         </button>
 
@@ -40,12 +40,7 @@
           <span>Your contact details ?</span>
 
           <span class="icon">
-            <img
-              src="./images/down-arrow-svgrepo-com.svg"
-              class="up"
-              id="up2"
-              alt=""
-            />
+            <i class="fas fa-angle-down"></i>
           </span>
         </button>
 
@@ -64,12 +59,7 @@
           <span>Is there any things ?</span>
 
           <span class="icon">
-            <img
-              src="./images/down-arrow-svgrepo-com.svg"
-              class="up"
-              id="up2"
-              alt=""
-            />
+            <i class="fas fa-angle-down"></i>
           </span>
         </button>
 
@@ -88,12 +78,7 @@
           <span>What about other things ?</span>
 
           <span class="icon">
-            <img
-              src="./images/down-arrow-svgrepo-com.svg"
-              class="up"
-              id="up3"
-              alt=""
-            />
+            <i class="fas fa-angle-down"></i>
           </span>
         </button>
 
@@ -108,33 +93,36 @@
       </div>
 
       <div class="accordion-item">
-        <button class="accordion-button" id="accordion-button-4">
-          <span>Any more exmpale ?</span>
+        <div class="accordion">
+          <button class="accordion-button" id="accordion-button-4">
+            <span>Any more exmpale ?</span>
 
-          <span class="icon">
-            <img
-              src="./images/down-arrow-svgrepo-com.svg"
-              class="up"
-              id="up4"
-              alt=""
-            />
-          </span>
-        </button>
+            <span class="icon">
+              <i class="fas fa-angle-down"></i>
+            </span>
+          </button>
 
-        <div class="accordion-content" id="accordion-content-4">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-            alias, hic deleniti adipisci nihil, velit voluptatibus optio rem
-            quis odio minus eos! Maiores, sapiente doloremque. Voluptatum iste
-            dolore cupiditate esse.
-          </p>
+          <div class="accordion-content" id="accordion-content-4">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consectetur alias, hic deleniti adipisci nihil, velit voluptatibus
+              optio rem quis odio minus eos! Maiores, sapiente doloremque.
+              Voluptatum iste dolore cupiditate esse.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </body>
   <script>
-    $(document).ready(function () {
-      $(".accordion-content").hide();
+    let accordion = document.querySelectorAll("accordion-item .accordion");
+    accordion.forEach((acco) => {
+      acco.onclick = () => {
+        accordion.forEach((subcontent) => {
+          subcontent.classList.remove("active");
+        });
+        acco.classList.add("active");
+      };
     });
   </script>
 </html>
